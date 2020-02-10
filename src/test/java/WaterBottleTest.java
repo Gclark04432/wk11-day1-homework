@@ -28,4 +28,12 @@ public class WaterBottleTest {
         assertEquals(0, bottle.checkCurrentVolume());
     }
 
+    @Test
+    public void checkFillFunctionChangesVolumeTo100Again(){
+        bottle.empty();
+        bottle.fill();
+        assertEquals(100, bottle.checkCurrentVolume());
+    }
+
+
 }
