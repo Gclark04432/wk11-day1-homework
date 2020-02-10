@@ -8,4 +8,8 @@ public class Printer {
     public int checkPaperLeft(){
         return this.paperLeft;
     }
+
+    public boolean hasEnoughPaperToPrint(int paperRequired){
+        return this.paperLeft >= paperRequired;
+    }
 }
