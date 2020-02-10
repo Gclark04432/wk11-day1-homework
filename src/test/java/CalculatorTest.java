@@ -17,4 +17,9 @@ public class CalculatorTest {
         assertEquals(12, calculator.add());
 }
 
+@Test
+    public void canSubtractWithTwoNumbers(){
+        assertEquals(8, calculator.subtract());
+}
+
 }
