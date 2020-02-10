@@ -12,4 +12,13 @@ public class Printer {
     public boolean hasEnoughPaperToPrint(int paperRequired){
         return this.paperLeft >= paperRequired;
     }
+
+    public int printPages(int numberOfPagesToPrint) {
+        if (hasEnoughPaperToPrint(numberOfPagesToPrint)) {
+            this.paperLeft -= numberOfPagesToPrint;
+            return this.paperLeft;
+        }
+        return this.paperLeft;
+    }
+
 }

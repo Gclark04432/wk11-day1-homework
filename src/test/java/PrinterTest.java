@@ -30,4 +30,14 @@ public class PrinterTest {
     public void checkCanTellIfDoesNotHaveEnoughPaperToPrint(){
         assertEquals(false, printer.hasEnoughPaperToPrint(101));
     }
+
+    @Test
+    public void checkReducesNumberOfPagesLeftIfAbleToPrint(){
+        assertEquals(10, printer.printPages(90));
+    }
+
+    @Test
+    public void checkDoesNotAffectPaperLeftIfNotAbleToPrint(){
+        assertEquals(100, printer.printPages(120));
+    }
 }
